@@ -1,0 +1,16 @@
+{
+  "name": "flinc_mini_map",
+  "version": "0.0.1",
+  "engines": {
+    "node": "0.4.3"
+  },
+  "dependencies":{
+    "express":    "~> 2.3.0",
+    "jade":       "~> 0.12.4",
+    "gravatar":   "~> 1.0.0",
+    "underscore": "~> 1.1.6"
+  },
+  "devDependencies": {
+    "nodeunit": "~> 0.5.1"
+  }
+}

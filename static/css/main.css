@@ -1,0 +1,206 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background: #dce6f0;
+}
+
+h1 {
+  position: absolute;
+  z-index: 900;
+  margin: 0;
+  padding: 0px;
+  height: 40px;
+  width: 100%;
+  overflow: hidden;
+  
+  color: white;
+  background: #2c4a61 url(/img/h1_bg.png) repeat-x;
+
+  letter-spacing: normal;
+  line-height: 1.3em;
+}
+
+h1 img {
+  width: 50px;
+  float: left;
+  margin: 7px 20px;
+}
+
+#map {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden !important;
+}
+
+#driver_setup {
+  position: absolute;
+  z-index: 910;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  background: rgb(220,230,240); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(220,230,240,1) 0%, rgba(172,202,233,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(220,230,240,1)), color-stop(100%,rgba(172,202,233,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(220,230,240,1) 0%,rgba(172,202,233,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(220,230,240,1) 0%,rgba(172,202,233,1) 100%); /* Opera11.10+ */
+  background: -ms-linear-gradient(top, rgba(220,230,240,1) 0%,rgba(172,202,233,1) 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dce6f0', endColorstr='#accae9',GradientType=0 ); /* IE6-9 */
+  background: linear-gradient(top, rgba(220,230,240,1) 0%,rgba(172,202,233,1) 100%); /* W3C */
+
+  text-align: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+li {
+  margin: 10px 0;
+}
+
+input, button, #ok {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+input {
+  width: 230px;
+  padding: 5px;
+
+  background: white;
+  border: none;
+
+  font-size: 14px;
+
+  -webkit-box-shadow: 0px 1px 2px 0px #b8b8b8;
+  -moz-box-shadow: 0px 1px 2px 0px #b8b8b8;
+  box-shadow: 0px 1px 2px 0px #b8b8b8;
+}
+
+button.car {
+  width: 120px;
+  height: 60px;
+
+  border: none;
+  background: url(/img/mini.png) center center;
+  background-repeat:no-repeat;
+  color: white;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  text-shadow: 1px 1px 5px #000;
+  filter: dropshadow(color=#000, offx=1, offy=1);
+}
+
+button.car.active {
+  background-color: #2c4a61;
+}
+
+#ok {
+  height: 40px;
+  width: 240px;
+
+  color: white;
+  border: none;
+  background: #2c4a61 url(/img/h1_bg.png) repeat-x;
+
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: normal;
+  line-height: 1.3em;
+}
+
+#info {
+  position: absolute;
+  z-index: 910;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+
+  text-align: center;
+}
+
+#info span {
+  padding: 4px 8px;
+
+  background: black;
+  color: white;
+
+  font-weight: bold;
+
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#info span.error {
+  background: red;
+}
+
+.bubble {
+  position: absolute;
+  z-index: 910;
+  bottom: 0;
+  width: 220px;
+  padding: 10px;
+
+  background: white;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.bubble img {
+  width: 60px;
+  height: 60px;
+  margin: 0 10px 0 0;
+  float: left;
+}
+
+.bubble .text {
+  height: 60px;
+}
+
+.bubble .text p.hint {
+  margin: 0;
+  padding: 0;
+
+  color: #ccc;
+
+  text-align: left;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: normal;
+  letter-spacing: normal;
+  line-height: 1.5em;
+}
+
+.bubble .text p.name {
+  margin: 0;
+  padding: 0;
+
+  text-align: left;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: normal;
+  letter-spacing: -1px;
+  line-height: 1.2em;Close
+}

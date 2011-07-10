@@ -1,0 +1,33 @@
+!!! 5
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="/css/main.css", rel="stylesheet")
+
+    link(rel="apple-touch-icon-precomposed", sizes="114x114", href="/img/apple-touch-icon-144.png")
+    link(rel="apple-touch-icon-precomposed", sizes="72x72", href="/img/apple-touch-icon-72.png")
+    link(rel="apple-touch-icon-precomposed", href="/img/apple-touch-icon-57.png")
+    link(rel="shortcut icon", href="/img/apple-touch-icon-57.png")
+
+  body
+    h1
+      img(src="/img/mini.png")
+      span flinc mini map
+
+    #map
+
+    script(src="http://js.pusherapp.com/1.8/pusher.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js")
+    script(src="http://maps.google.com/maps/api/js?sensor=false")
+    script(src="/js/underscore.js")
+    script(src="/js/backbone.js")
+    script(src="/js/cars.js")
+    script(type='text/javascript')
+      mini = {
+        cars: new CarCollection(!{cars}),
+        pusherKey: "!{pusherKey}"
+      }
+    script(src="/js/map.js")
+    script(src="/js/driver_info.js")
+    script(src="/js/application.js")

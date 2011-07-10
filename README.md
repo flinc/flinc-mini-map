@@ -12,4 +12,4 @@ You need to set the following environment variables:
 
 * `PUSHER_SECRET` - see above
 
-* `FLINC_MINI_MAP_EMAILS` - A string of email addresses, concatenated with pipes`, like `user1@example.org|user2@example.org|user3@example.org`. These are used the identify the drivers of the car. Also each car gets a gravatar image based on its current driver's email address.
+* `FLINC_MINI_MAP_EMAILS` - A string of email addresses, concatenated with pipes, like `user1@example.org|user2@example.org|user3@example.org`. These are used the identify the drivers of the car. Also each car gets a gravatar image based on its current driver's email address.

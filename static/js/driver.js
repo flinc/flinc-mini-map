@@ -48,7 +48,7 @@ var Driver = Backbone.View.extend({
     }, {
       error: this.error
     });
-    
+
     this.updateInfo();
   },
 
@@ -64,6 +64,11 @@ var Driver = Backbone.View.extend({
   },
 
   error: function(model, response) {
+    if(response.status == 503) {
+      this.info.text('Timeout. Will try again later');
+      return;
+    }
+
     this.info.addClass('error').text('Something went wrong. Call Christian. :P');
     navigator.geolocation.clearWatch(this.watchId);
   }

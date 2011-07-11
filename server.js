@@ -42,6 +42,10 @@ app.get('/', function(req, res){
   res.render('index', { layout: false, locals: { cars: JSON.stringify(cars), pusherKey: pusher.options.appKey } });
 });
 
+app.post('/', function(req, res){
+  res.render('index', { layout: false, locals: { cars: JSON.stringify(cars), pusherKey: pusher.options.appKey } });
+});
+
 app.get('/driver', function(req, res){
   res.render('driver', { layout: false, locals: { cars: JSON.stringify(cars), pusherKey: pusher.options.appKey } });
 });

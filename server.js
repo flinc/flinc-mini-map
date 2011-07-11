@@ -27,7 +27,7 @@ var cars = new CarCollection();
 redis.get("flinc:mini:map:cars", function (err, reply) {
   cars.reset(JSON.parse(reply));
 
-  for(var i = cars.size(); i < NUM_CARS; i++) {
+  for(var i = cars.size() + 1; i <= NUM_CARS; i++) {
     cars.add( new Car({
       name:   'nobody ' +  i,
       id:     i,

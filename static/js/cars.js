@@ -1,6 +1,20 @@
-if(typeof require == "function") {
-  var Backbone = require(__dirname+'/backbone'),
-      gravatar = require('gravatar');
+/*
+ *  IE(6) doesn't like the redeclaration of a local var and
+ *  will throw an error on this statement, when Backbone 
+ *  was previously defined, even if how won't enter the block
+ *  of the if statement.
+ *
+ *  if(typeof require !== 'undefined') {
+ *    var Backbone = require(__dirname+'/backbone');
+ *  }
+ *
+ *  So I have to use the global namespace to make node AND IE happy.
+ *  Also I feel strange about writing all this, just because I declared
+ *  one single global variable.
+ */
+if(typeof Backbone === 'undefined' && typeof require !== 'undefined') {
+  Backbone = require(__dirname+'/backbone');
+  var gravatar = require('gravatar');
 }
 
 (function (exports) {
@@ -22,7 +36,7 @@ if(typeof require == "function") {
 
     gravatarUrl: function() {
       // can't set gravatar on the client
-      if(!gravatar) return false;
+      if(typeof gravatar === 'undefined') return false;
 
       return this.set({
         gravatar: gravatar.url(this.email(), { s: '60' }, true)

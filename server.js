@@ -2,11 +2,11 @@ var port = process.env.PORT || 3000,
     express = require('express'),
     _ = require('underscore'),
     app = express.createServer(),
-    redis = require("redis"),
+    redis = require('redis'),
+    Pusher = require('pusher'),
 
     Car = require(__dirname+'/static/js/cars').Car,
-    CarCollection = require(__dirname+'/static/js/cars').CarCollection,
-    Pusher = require(__dirname+'/pusher');
+    CarCollection = require(__dirname+'/static/js/cars').CarCollection;
 
 // INITIALIZE REDIS
 if (process.env.REDISTOGO_URL) {

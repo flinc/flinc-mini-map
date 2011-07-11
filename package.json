@@ -9,7 +9,8 @@
     "jade":       "~> 0.12.4",
     "redis":      "~> 0.5.11",
     "gravatar":   "~> 1.0.0",
-    "underscore": "~> 1.1.6"
+    "underscore": "~> 1.1.6",
+    "pusher":     "~> 0.0.1"
   },
   "devDependencies": {
     "nodeunit": "~> 0.5.1"

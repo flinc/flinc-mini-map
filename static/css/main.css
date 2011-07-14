@@ -209,6 +209,7 @@ button.car.active {
   position: absolute;
   bottom: 0px;
   height: 20px;
+  font-size: 10px;
   line-height: 20px;
   color: white;
   background: #2f2f2f;

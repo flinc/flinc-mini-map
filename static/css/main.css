@@ -157,7 +157,7 @@ button.car.active {
 .bubble {
   position: absolute;
   z-index: 910;
-  bottom: 0;
+  bottom: 20px;
   width: 220px;
   padding: 10px;
 
@@ -203,4 +203,15 @@ button.car.active {
   text-transform: normal;
   letter-spacing: -1px;
   line-height: 1.2em;Close
+}
+
+#hint {
+  position: absolute;
+  bottom: 0px;
+  height: 20px;
+  line-height: 20px;
+  color: white;
+  background: #2f2f2f;
+  text-align: center;
+  width: 100%;
 }

@@ -215,3 +215,7 @@ button.car.active {
   text-align: center;
   width: 100%;
 }
+
+#hint a, #hint a:hover, #hint a:visited {
+  color: white;
+}

@@ -37,7 +37,7 @@ var Driver = Backbone.View.extend({
     this.car.set({ name: name });
     this.car.email(email);
 
-    mini.router.navigate([ 'login', email, name ].join('/'), true);
+    mini.router.navigate([ 'login', encodeURIComponent(email), name ].join('/'), true);
 
     this.watchId = navigator.geolocation.watchPosition(_.bind(this.position, this));
 

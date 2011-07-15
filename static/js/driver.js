@@ -28,11 +28,16 @@ var Driver = Backbone.View.extend({
 
   register: function(e) {
     e.preventDefault();
-    var carId = this.form.find('button.car.active').data('car') * 1;
+    var carId = this.form.find('button.car.active').data('car') * 1,
+        name  = this.form.find('input.name').val(),
+        email = this.form.find('input.email').val();
+
     this.car = mini.cars.get(carId);
 
-    this.car.set({ name: this.form.find('input.name').val() });
-    this.car.email(this.form.find('input.email').val());
+    this.car.set({ name: name });
+    this.car.email(email);
+
+    mini.router.navigate([ 'login', email, name ].join('/'), true);
 
     this.watchId = navigator.geolocation.watchPosition(_.bind(this.position, this));
 
@@ -76,4 +81,6 @@ var Driver = Backbone.View.extend({
 
 $(window).load(function(){
   mini.driver = new Driver();
+  mini.router = new DriverLogin();
+  Backbone.history.start();
 });
